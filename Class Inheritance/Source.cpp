@@ -4,7 +4,7 @@ CIS 1202
 3-25-21
 
 Instructions:
-First class program
+Class program
 */
 
 #include "Header.h"
