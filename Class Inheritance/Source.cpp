@@ -26,7 +26,9 @@ int main() {
 
 	endFile();
 }
-
+//******************
+//storeVehicleInfo *
+//******************
 void storeVehicleInfo(Vehicle vehicle1) {
 	string manufacturer;
 	int year;
