@@ -1,13 +1,11 @@
-#include <iostream>
-#include <string>
-using namespace std;
+
 #ifndef VEHICLE_H
 #define VEHICLE_H
 
 class Vehicle {
 private:
-	string manufacturer;
-	int yearBuilt;
+	string manufacturer = "Unknown";
+	int yearBuilt = 0;
 
 public:
 	//Constructors

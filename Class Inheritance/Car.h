@@ -1,5 +1,4 @@
 #include "Vehicle.h"
-#include <iostream>
 #include <string>
 using namespace std;
 #ifndef CAR_H
@@ -7,7 +6,7 @@ using namespace std;
 
 class Car : Vehicle {
 private:
-	int doorNum;
+	int doorNum = 0;
 
 public:
 	//Constructors
