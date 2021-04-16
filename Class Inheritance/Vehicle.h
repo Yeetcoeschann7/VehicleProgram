@@ -1,9 +1,10 @@
-
+#include <string>
+using namespace std;
 #ifndef VEHICLE_H
 #define VEHICLE_H
 
 class Vehicle {
-private:
+protected:
 	string manufacturer = "Unknown";
 	int yearBuilt = 0;
 

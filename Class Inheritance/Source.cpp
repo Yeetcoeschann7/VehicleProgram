@@ -10,11 +10,13 @@ Class program
 #include "Header.h"
 #include "Vehicle.h"
 #include "Car.h"
+#include "Truck.h"
 
 using namespace std;
 
 //function prototypes
 void storeVehicleInfo(Vehicle);
+void storeCarInfo(Car);
 
 //******
 //main *
@@ -22,7 +24,10 @@ void storeVehicleInfo(Vehicle);
 int main() {
 	cout << "\nVehicle Program\n";
 	Vehicle vehicle1;
+	Car vehicle2;
+	Truck vehicle3;
 	storeVehicleInfo(vehicle1);
+	storeCarInfo(vehicle2);
 
 	endFile();
 }
@@ -46,4 +51,32 @@ void storeVehicleInfo(Vehicle vehicle1) {
 	vehicle1.setYearBuilt(year);
 
 	vehicle1.displayInfo();
+}
+
+//**************
+//storeCarInfo *
+//**************
+void storeCarInfo(Car car) {
+	string manufacturer;
+	int year;
+	int doorNum;
+
+	cout << "\n\nCar:";
+
+	cin.ignore(100, '\n');
+	cout << "\nEnter manufacturer: ";
+	getline(cin, manufacturer);
+	car.setManufacturer(manufacturer);
+
+	cout << "Enter year built: ";
+	cin >> year;
+	validateNum(year);
+	car.setYearBuilt(year);
+
+	cout << "Enter number of doors: ";
+	cin >> doorNum;
+	validateNum(doorNum);
+	car.setDoorNum(doorNum);
+
+	car.displayInfo();
 }

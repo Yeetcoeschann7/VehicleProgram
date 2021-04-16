@@ -4,7 +4,7 @@ using namespace std;
 #ifndef CAR_H
 #define CAR_H
 
-class Car : Vehicle {
+class Car : public Vehicle {
 private:
 	int doorNum = 0;
 

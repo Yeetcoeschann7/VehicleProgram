@@ -2,9 +2,9 @@
 #include <string>
 using namespace std;
 #include "Vehicle.h"
-#ifndef CAR_H
-#define CAR_H
-class Truck : private Vehicle {
+#ifndef TRUCK_H
+#define TRUCK_H
+class Truck : public Vehicle {
 private:
 	int capacity = 0;
 
