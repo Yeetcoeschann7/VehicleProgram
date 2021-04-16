@@ -17,6 +17,7 @@ using namespace std;
 //function prototypes
 void storeVehicleInfo(Vehicle);
 void storeCarInfo(Car);
+void storeTruckInfo(Truck);
 
 //******
 //main *
@@ -28,6 +29,7 @@ int main() {
 	Truck vehicle3;
 	storeVehicleInfo(vehicle1);
 	storeCarInfo(vehicle2);
+	storeTruckInfo(vehicle3);
 
 	endFile();
 }
@@ -53,15 +55,15 @@ void storeVehicleInfo(Vehicle vehicle1) {
 	vehicle1.displayInfo();
 }
 
-//**************
+//****************
 //storeCarInfo *
-//**************
+//****************
 void storeCarInfo(Car car) {
 	string manufacturer;
 	int year;
 	int doorNum;
 
-	cout << "\n\nCar:";
+	cout << "\n\n\nCar:";
 
 	cin.ignore(100, '\n');
 	cout << "\nEnter manufacturer: ";
@@ -79,4 +81,32 @@ void storeCarInfo(Car car) {
 	car.setDoorNum(doorNum);
 
 	car.displayInfo();
+}
+
+//****************
+//storeTruckInfo *
+//****************
+void storeTruckInfo(Truck truck) {
+	string manufacturer;
+	int year;
+	int capacity;
+
+	cout << "\n\n\nTruck:";
+
+	cin.ignore(100, '\n');
+	cout << "\nEnter manufacturer: ";
+	getline(cin, manufacturer);
+	truck.setManufacturer(manufacturer);
+
+	cout << "Enter year built: ";
+	cin >> year;
+	validateNum(year);
+	truck.setYearBuilt(year);
+
+	cout << "Enter towing capacity: ";
+	cin >> capacity;
+	validateNum(capacity);
+	truck.setCapacity(capacity);
+
+	truck.displayInfo();
 }
